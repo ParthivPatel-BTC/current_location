@@ -18,6 +18,9 @@ Search : <%= @search.inspect %>
   function showLocation(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
+    alert(latitude);
+    alert(longitude);
+
     set_coockie_location(latitude, longitude);
   }
 
