@@ -1,6 +1,6 @@
-Location: <%= @location.inspect %>
-<br/><br/>
-Search : <%= @search.inspect %>
+Latitude: <%= @latitude.inspect %>
+<br/>
+Longitude: <%= @longitude.inspect %>
 
 <script>
   $( document ).ready(function() {
@@ -18,9 +18,6 @@ Search : <%= @search.inspect %>
   function showLocation(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    alert(latitude);
-    alert(longitude);
-
     set_coockie_location(latitude, longitude);
   }
 
@@ -36,10 +33,4 @@ Search : <%= @search.inspect %>
     document.cookie="latitude="+latitude+";";
     document.cookie="longitude="+longitude+";";
   }
-  // navigator.geolocation.getCurrentPosition(GetLocation);
-  // function GetLocation(location) {
-  //     alert(location.coords.latitude);
-  //     alert(location.coords.longitude);
-  //     alert(location.coords.accuracy);
-  // }
 </script>
